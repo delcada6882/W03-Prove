@@ -1,7 +1,7 @@
 class Mechanics:
     def __init__(self):
         self.losing_guess = False
-    def user_inputs(self, fin_word, compare, lives):
+    def user_inputs(self, fin_word, compare, lives): #This gets the input and then see's if its correct.
         use_inp = input("Guess a letter [a-z]: ")
         use_inp = use_inp.lower()
         i = 0

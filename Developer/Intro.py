@@ -3,11 +3,11 @@ here = []
 here.__len__()
 class Intro:
     def __init__(self):
-        self.word = ["wordfeas","worfeads","worfeafefeds","wofeaferds","wordsfeawefe","wfeafeords"]
-        self.parachute = [" ___", "/___\ ", "\   /", " \ / "]
-        self.person = ["  O  "," /|\ ", " / \ ", "\n^^^^^"]
-    def grabbing_word(self):
-        num = random.randint(2,3)
+        self.word = ["python", "hang man", "easy", "difficult", "answer",  "xylophone"] #these are the words that the hangman can go for
+        self.parachute = [" ___", "/___\ ", "\   /", " \ / "] #this is the parachute
+        self.person = ["  O  "," /|\ ", " / \ ", "\n^^^^^"] #this is the human
+    def grabbing_word(self): #this grabs a random word and then turns it into an array of _ to use for render
+        num = random.randint(0, 5)
         word_selection = self.word[num]
         final_word = list(word_selection)
         compare = []
@@ -16,7 +16,7 @@ class Intro:
         
         return final_word, compare
         
-    def render(self, lives, compare):
+    def render(self, lives, compare): #This displays all of the visual aspects of the game. Things like the parachute and man, also the underscores before you guess.
         string_compare = ""
         for x in compare:
             string_compare += f"{x} "
